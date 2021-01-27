@@ -1,0 +1,2706 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/9/2016 4:16:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="UKC16N1M1"
+  DTS:CreatorName="GLOBALDEV\alama"
+  DTS:DTSID="{9A0BD200-BD7A-4EF3-BAB5-0A17A1CABFA0}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
+  DTS:LocaleID="2057"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Talbot_PSA_PurgeManager"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="90"
+  DTS:VersionGUID="{EBEBEF73-B7FF-44A2-9BC7-8D5A1DDFF53B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{55D6FA2D-43E8-4CB6-8FA1-56A6BBE80FC4}"
+      DTS:ObjectName="BatchId">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{A7CC9135-25CD-4773-983A-523BF952C521}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread1"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{26D1F0DF-F89C-46DA-9652-5411B261CB96}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{AB265130-72E3-47BB-B71C-6C7CB4B2F280}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset1">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{6E70900A-7150-45AF-89AF-89721F840BCC}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase1">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{99ABE36A-3760-4BBD-918A-8DBD3A6C3693}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName1">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{4874B8FF-17CD-4616-AC6D-5EE9D45A50BB}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName1">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{5C88869C-93CB-48F3-9739-15208653B098}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate1">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{7892731D-7A72-42C9-BD21-4A6BC3C7F2C3}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID1">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread1\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{D583CE00-3AF4-455A-8212-612BD1A2E63B}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset1" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread1\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{5DC6AD83-495F-402F-8CBA-02135DE902A7}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="0">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase1"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="130"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName1"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="130"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName1"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="130"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate1"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID1"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{6C7663DB-9452-4487-BE8A-49039304EAFF}"
+                  DTS:ObjectName="{6C7663DB-9452-4487-BE8A-49039304EAFF}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase1" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{5B4633D0-3951-4099-9A5B-DB8E2F8486BA}"
+                  DTS:ObjectName="{5B4633D0-3951-4099-9A5B-DB8E2F8486BA}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName1" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{197049AF-DA12-4522-A3E3-91D147EE7EA7}"
+                  DTS:ObjectName="{197049AF-DA12-4522-A3E3-91D147EE7EA7}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName1" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{1083A978-1D55-4A2A-9AD9-86F7CACA29FC}"
+                  DTS:ObjectName="{1083A978-1D55-4A2A-9AD9-86F7CACA29FC}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate1" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{E5974814-8BFD-4FEC-B50A-ECA076AEEC8E}"
+                  DTS:ObjectName="{E5974814-8BFD-4FEC-B50A-ECA076AEEC8E}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID1" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread1\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{29A046FB-0D8A-491E-B705-C3D136A51B35}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl &#xA;WHERE ThreadId = 1 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset1" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread1.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{587E390D-F30C-4CF8-B512-69C34B74A600}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread1\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread1\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread10"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{5789C5F1-A734-476F-99BA-8F4BD06821E3}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread10">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{CB367C48-99BC-4341-B283-A7C05E2E01CA}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset10">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{C7065EBA-FDF8-46D8-9D92-A93ADCE55773}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase10">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{F2874629-803B-412A-BCD9-85B55EBAD4D1}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName10">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{12FFC273-1705-4B94-A60D-B858CF61FC68}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName10">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{DA48613B-8000-49C3-BD07-DEE657076297}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate10">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{22352E40-01F1-4AAE-827B-EE76D8509B2A}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID10">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread10\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{4767BC93-6B13-4C58-9175-5040BAED2579}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{AD5B5AB5-80A3-43C4-9671-3768A238B11B}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset10" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread10\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{FEEB0D85-4892-415A-BBF8-6B06C72326EC}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="2">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase10"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName10"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName10"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate10"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID10"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{A2072245-91FA-4709-A10B-756D86FAA831}"
+                  DTS:ObjectName="{A2072245-91FA-4709-A10B-756D86FAA831}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase10" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{A3FB5884-FBB7-4286-8503-544D40DAB5F2}"
+                  DTS:ObjectName="{A3FB5884-FBB7-4286-8503-544D40DAB5F2}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName10" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{AC66F451-7077-40B3-A9F0-9B2F54606E34}"
+                  DTS:ObjectName="{AC66F451-7077-40B3-A9F0-9B2F54606E34}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName10" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{59559520-7F0D-47F8-9867-D90518402802}"
+                  DTS:ObjectName="{59559520-7F0D-47F8-9867-D90518402802}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate10" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{8B2200BE-33AF-4981-95E3-735F03805BD3}"
+                  DTS:ObjectName="{8B2200BE-33AF-4981-95E3-735F03805BD3}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID10" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread10\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{48DAF35A-8B04-47A8-9B83-3E48A019E58A}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="2">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl&#xA;WHERE ThreadId = 10 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset10" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread10.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{8DB53EA6-F25C-4BCA-8B52-815866D17430}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread10\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread10\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread2"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{BC5306F0-7960-4B3A-BFD8-C064B1521C9F}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread2">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{3FF35534-47E6-4D0F-8297-F3D1F74A4DB2}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset2">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{5A60BA48-43E5-4685-8F8D-0DFC2504C096}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase2">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{8A39A849-D809-49F6-B78F-CDA299E49FE9}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName2">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{33869C94-F3C7-48B0-A27D-D01202C987EE}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName2">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{64013AFC-C6DD-48B1-B620-C408E945E35F}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate2">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{1420BB70-8422-48B4-B2FF-7B6227179A22}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID2">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread2\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{39FD5557-E148-4740-9AEC-8652EFA9D1AF}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{0090E97B-6A9F-48AC-A450-425DA30106D7}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset2" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread2\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{AD8D0ECD-C26B-4CC0-A591-EE806BF34F47}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="3">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase2"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName2"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName2"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate2"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID2"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{94DC416B-351F-4BE0-8E98-8F49FFF1E18A}"
+                  DTS:ObjectName="{94DC416B-351F-4BE0-8E98-8F49FFF1E18A}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase2" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{280D87F8-262E-444E-A370-330262B0C03C}"
+                  DTS:ObjectName="{280D87F8-262E-444E-A370-330262B0C03C}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName2" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{469B83B8-B909-428B-AB08-D13327FA11A3}"
+                  DTS:ObjectName="{469B83B8-B909-428B-AB08-D13327FA11A3}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName2" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{7973FCC4-EE8A-45BE-8403-4F36427B1BF3}"
+                  DTS:ObjectName="{7973FCC4-EE8A-45BE-8403-4F36427B1BF3}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate2" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{76847BE8-6B77-4822-8941-0283CA07307A}"
+                  DTS:ObjectName="{76847BE8-6B77-4822-8941-0283CA07307A}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID2" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread2\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{89D53C1D-93A1-4EB4-AB8E-7539F471D103}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="3">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl&#xA;WHERE ThreadId = 2 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset2" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread2.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{B4CB10F4-4200-43FE-B505-8EE6601CCF67}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread2\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread2\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread3"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{B9AD1A6E-8799-419F-8716-A2DE2DDB37B3}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread3">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{E5096D06-7CAA-4BD2-AA8C-4A9FF29A2CF6}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset3">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{1C3BC3B3-4769-4F99-A7A3-8763E6832F0A}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase3">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{9FDD8DFD-562D-4FE2-89FA-4FD5972675D3}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName3">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{D0952472-F439-4905-BEBE-CFAEA0E92E7C}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName3">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{119CCC27-DCB9-4136-8E72-4FD9ED96F81D}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate3">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{6B304B4C-98B0-49EE-9809-C590CB9BF7BE}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID3">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread3\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{18428508-CF47-4A2B-AA3F-4D3EA4883B57}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{E83EAC32-A8E3-4D56-A2AC-05DE4DECB24E}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset3" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread3\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{6E96CD62-C0AA-4D8C-BEF6-5B2E0B59350F}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="1">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase3"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName3"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName3"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate3"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID3"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{6A545F66-9D27-43A3-8E23-9305E35F6754}"
+                  DTS:ObjectName="{6A545F66-9D27-43A3-8E23-9305E35F6754}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase3" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{992E20B7-2450-4326-8582-F880850E8D7C}"
+                  DTS:ObjectName="{992E20B7-2450-4326-8582-F880850E8D7C}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName3" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{EBA645FF-91C0-41F6-9FE7-E9F0EA3DDF46}"
+                  DTS:ObjectName="{EBA645FF-91C0-41F6-9FE7-E9F0EA3DDF46}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName3" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{D2EBD54B-AF46-48E0-BE04-07595EDC7951}"
+                  DTS:ObjectName="{D2EBD54B-AF46-48E0-BE04-07595EDC7951}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate3" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{6F8F93C6-A9FB-4BFF-963D-3940286FA0F6}"
+                  DTS:ObjectName="{6F8F93C6-A9FB-4BFF-963D-3940286FA0F6}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID3" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread3\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{29204AF0-1FA3-4023-B240-3D910C8EF077}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.ArchiveControl &#xA;WHERE ThreadId = 3 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset3" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread3.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{B1A0359A-06EB-4A24-AF11-ADE8DC533A7C}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread3\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread3\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread4"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{DA7CC016-5070-41A2-8875-EC0950D28D5E}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread4">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{CD206FAB-6A4A-4668-B0D1-E8143F8AA6F4}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset4">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{DA3F5FE0-7A3D-4464-9F1E-FB8353003E8C}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase4">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{5F5B0673-0B63-4423-B533-862E379F4009}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName4">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{6E28AF01-442B-47E6-903C-BAF4032C56C4}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName4">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{36D387C6-8E93-42BB-BB2D-CE178CD24B66}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate4">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{983FB040-0C0F-4954-9D01-F92112C853FD}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID4">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread4\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{2A9F1CC2-9EC1-4957-B558-960BA0210CAE}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{3E18EC17-8B9B-4878-B3C7-F5F6E411CE65}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset4" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread4\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{18182DE2-51BF-49FF-BB96-17085C4288DD}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="5">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase4"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName4"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName4"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate4"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID4"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{334D1FE3-02D2-40D9-9E16-0B239893604B}"
+                  DTS:ObjectName="{334D1FE3-02D2-40D9-9E16-0B239893604B}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase4" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{9EDFB11F-5072-445B-8ED5-0A06630A4460}"
+                  DTS:ObjectName="{9EDFB11F-5072-445B-8ED5-0A06630A4460}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName4" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{EE34C65B-8200-4785-B5F4-73CA15966DE0}"
+                  DTS:ObjectName="{EE34C65B-8200-4785-B5F4-73CA15966DE0}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName4" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{2E2028F4-A820-4E4E-BD20-2C58E84FE5EE}"
+                  DTS:ObjectName="{2E2028F4-A820-4E4E-BD20-2C58E84FE5EE}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate4" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{E1A60491-4F1B-4CF1-974D-5CC15043DCC8}"
+                  DTS:ObjectName="{E1A60491-4F1B-4CF1-974D-5CC15043DCC8}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID4" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread4\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{E0E7297B-E805-464F-86A6-3D7D61209E6B}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="5">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl&#xA;WHERE ThreadId = 4 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset4" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread4.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{76110B9C-0541-4F36-AA49-8C0D0ED9B135}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread4\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread4\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread5"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{D8609742-9F50-4265-9BA6-FE067BD282B3}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread5">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{291D9FF2-C71B-4745-A59A-3A079B17EDE0}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset5">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{49ECB477-E6CB-4C43-B499-33B5C71EB6C0}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase5">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{AE513376-DC74-42E0-A42D-F251BA0EC862}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName5">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{C16BDADE-00C4-4426-B945-ABFE1C90A87F}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName5">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{B1ECC0BD-5528-4D1B-A9E1-464AFE56BA8D}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate5">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{E2251A32-5864-4232-8A0B-B24C5152E099}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID5">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread5\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{D729FECB-C601-4C7A-8BBC-ABBC63B7D15A}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{49FAF2C4-BF03-4CD3-AF43-D6F58FCEAB21}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset5" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread5\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{8FCD2318-1CA5-42A0-ADEF-3A45188C783F}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="4">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase5"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName5"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName5"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate5"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID5"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{B5E63866-4CD8-4570-A61F-6311BE2AE8FF}"
+                  DTS:ObjectName="{B5E63866-4CD8-4570-A61F-6311BE2AE8FF}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase5" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{8F1AE0BE-CDDB-4210-860B-6C3C19B3DACB}"
+                  DTS:ObjectName="{8F1AE0BE-CDDB-4210-860B-6C3C19B3DACB}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName5" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{A42AD278-0749-429D-8AA3-87EA514AF599}"
+                  DTS:ObjectName="{A42AD278-0749-429D-8AA3-87EA514AF599}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName5" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{1F4BC83C-CEC7-4867-8120-710868A385B3}"
+                  DTS:ObjectName="{1F4BC83C-CEC7-4867-8120-710868A385B3}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate5" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{C4E8A58E-817C-4881-B634-C5D14E19EE44}"
+                  DTS:ObjectName="{C4E8A58E-817C-4881-B634-C5D14E19EE44}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID5" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread5\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{376D0DB2-D8BF-4A20-AADB-A748E15A1700}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="4">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl&#xA;WHERE ThreadId = 5 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset5" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread5.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{D8F86B7B-359B-4EF3-ABA6-5014C645ACC4}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread5\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread5\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread6"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{5994C173-9CB1-4120-A202-01C15F33A5EF}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread6">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{D9341CFC-D8B0-4ED0-9175-80CE387C9DC7}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset6">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{8BABBE68-A5DC-49C1-B6F8-CD4EDB7FC1EB}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase6">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{B6C8493A-AC3F-4096-98AD-90F4E3B22A9F}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName6">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{03B004E1-4968-4D11-93D3-5E71683B63A3}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName6">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{958F1514-E108-4FD5-AE1C-53B4B119846B}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate6">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{AE9A6939-4DD5-4618-ADC9-A096E4D94236}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID6">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread6\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{1BC9D35B-1FB3-4ED1-ADDB-1991476D2BFB}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{1D04A9A0-E4C0-42AB-9BEF-52CF2C567C4B}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset6" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread6\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{7F28CE51-EF86-4F77-9C3C-2653D2C6E0DA}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="6">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase6"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName6"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName6"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate6"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID6"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{A700DC1B-AE0F-429D-9E4D-0207A199BD2A}"
+                  DTS:ObjectName="{A700DC1B-AE0F-429D-9E4D-0207A199BD2A}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase6" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{6F36C3E9-D3B6-441B-BF3C-BA33803B934F}"
+                  DTS:ObjectName="{6F36C3E9-D3B6-441B-BF3C-BA33803B934F}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName6" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{6622EA5F-CCC0-4C73-B056-30F5B5ABC819}"
+                  DTS:ObjectName="{6622EA5F-CCC0-4C73-B056-30F5B5ABC819}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName6" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{E94EFDC0-9F54-483E-AFC6-8DB697A16BBE}"
+                  DTS:ObjectName="{E94EFDC0-9F54-483E-AFC6-8DB697A16BBE}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate6" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{00FA0F46-8E9E-4A16-A516-75A48B75E6F0}"
+                  DTS:ObjectName="{00FA0F46-8E9E-4A16-A516-75A48B75E6F0}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID6" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread6\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{2F0F7D73-9E1E-476F-9ED5-ABC614423F45}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="6">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl&#xA;WHERE ThreadId = 6 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset6" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread6.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{4EB4DCF0-FF7F-4F44-A19E-A1D2C25BF42A}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread6\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread6\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread7"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{C0002767-F3E5-427C-BD2E-AB160959F0A9}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread7">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{7ADEB084-9ECB-435C-9F66-7D0CEA181F4E}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset7">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{7FB6D843-02DD-4889-A506-7841F17EC629}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase7">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{C507CC83-DAF8-480C-8CFA-2D00C82EA209}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName7">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{F0DFDA5B-F224-42D1-A7F6-34DC95F6F98F}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName7">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{0409902A-B244-449B-9D35-42F39D02ADF2}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate7">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{14A369C3-7E57-4ED6-821D-8103D3E0E63F}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID7">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread7\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{2B451BE7-2B34-4616-8854-FB519A127A1A}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{DE30FF71-D2A4-4DBC-AB43-FBF442933313}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset7" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread7\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{8EEDF444-3ED9-46E4-9C55-DB11850E515F}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="7">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase7"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName7"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName7"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate7"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID7"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{142F8ACB-F140-42E5-AB8F-7BEC7E923D6D}"
+                  DTS:ObjectName="{142F8ACB-F140-42E5-AB8F-7BEC7E923D6D}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase7" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{840E1749-93B8-449C-8CED-AA30201F453D}"
+                  DTS:ObjectName="{840E1749-93B8-449C-8CED-AA30201F453D}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName7" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{CDD5E0C2-F4B1-4571-971D-395557485DF0}"
+                  DTS:ObjectName="{CDD5E0C2-F4B1-4571-971D-395557485DF0}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName7" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{0AA4CBFE-C0C9-4F28-BD64-438E6B2664B0}"
+                  DTS:ObjectName="{0AA4CBFE-C0C9-4F28-BD64-438E6B2664B0}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate7" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{DA86AB29-C573-4D24-B092-FD9D943B11CF}"
+                  DTS:ObjectName="{DA86AB29-C573-4D24-B092-FD9D943B11CF}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID7" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread7\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{1C568A27-EA86-407A-B348-ABFCEE43A8F9}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="7">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl&#xA;WHERE ThreadId = 7 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset7" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread7.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{37662513-C584-4CA5-B5E6-E2E9223F63F7}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread7\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread7\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread8"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{E2365A79-20F4-42A6-A08C-F4B36F2944CB}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread8">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{2A3D9BF8-0471-42A9-90BC-1B8E1080DF3E}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset8">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{F8731253-22FF-49F0-8020-6CB8E7360407}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase8">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{3E509C3F-C5D4-43BE-9B5D-C44D5635700A}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName8">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{63F8FE06-6CE3-4030-B80E-D1140588A29C}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName8">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{CB592A4D-8F5E-49D8-9758-B6318F87E2AE}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate8">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{56E8D756-CEA2-41DD-AC67-9F9776F12E01}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID8">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread8\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{D5A62F43-A6C0-4F08-A34A-0F511A88916A}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{5FB0036F-C175-4B85-9BE8-8030165D7DFD}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset8" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread8\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{17DFDA67-A019-4DC2-BACB-E4E4226B3A1E}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="8">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase8"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName8"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName8"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate8"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID8"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{289ABC11-5C0E-40E5-B53A-0C519E9D53C4}"
+                  DTS:ObjectName="{289ABC11-5C0E-40E5-B53A-0C519E9D53C4}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase8" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{BD9B6CEF-2807-478D-96DF-6B88AE8379AA}"
+                  DTS:ObjectName="{BD9B6CEF-2807-478D-96DF-6B88AE8379AA}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName8" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{83165F0C-5BB9-44DE-85B6-EAFA8A412636}"
+                  DTS:ObjectName="{83165F0C-5BB9-44DE-85B6-EAFA8A412636}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName8" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{1615724F-EA8D-4819-9D63-6AE5BA2F0CB8}"
+                  DTS:ObjectName="{1615724F-EA8D-4819-9D63-6AE5BA2F0CB8}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate8" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{ABEE7861-28FF-435B-83C8-BBF3E5C6C8FE}"
+                  DTS:ObjectName="{ABEE7861-28FF-435B-83C8-BBF3E5C6C8FE}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID8" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread8\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{EBF85FF5-E6F2-4569-AD3F-9F000D8B4978}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="8">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl&#xA;WHERE ThreadId = 8 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset8" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread8.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{2CAB924B-7429-41FA-B15E-23E2A624B175}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread8\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread8\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Execute Purge Manager Thread9"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{D1B39C8E-1757-4C82-AB64-E48947D82459}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Purge Manager Thread9">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{1E0FCEBB-6D99-41E4-AC4D-0D35BD0252E0}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveControlResultset9">
+              <DTS:VariableValue
+                DTS:DataSubType="ManagedSerializable"
+                DTS:DataType="13">
+                <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                  <SOAP-ENV:Body>
+                    <xsd:anyType
+                      id="ref-1"></xsd:anyType>
+                  </SOAP-ENV:Body>
+                </SOAP-ENV:Envelope>
+              </DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{9CDF4B5E-8DF5-4A6C-BD25-B742B791A234}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveDatabase9">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{2CBB2E60-A3F2-44B9-9E3A-1720049C92E1}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveSchemaName9">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{584BA401-CED9-4CA6-92B8-5819BFCB2480}"
+              DTS:IncludeInDebugDump="2345"
+              DTS:Namespace="User"
+              DTS:ObjectName="ArchiveTableName9">
+              <DTS:VariableValue
+                DTS:DataType="8"
+                xml:space="preserve"></DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{FB7F60EC-9B43-4239-93D5-6FAEF5158C6A}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="IsPurgeCandidate9">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:DTSID="{7DA7A2EC-ECF5-4424-9746-7EAAF380018B}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="User"
+              DTS:ObjectName="ThreadID9">
+              <DTS:VariableValue
+                DTS:DataType="3">0</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread9\Foreach Table"
+              DTS:CreationName="STOCK:FOREACHLOOP"
+              DTS:Description="Foreach Loop Container"
+              DTS:DTSID="{D393DB18-FC40-4924-A48F-DB205021C30E}"
+              DTS:ExecutableType="STOCK:FOREACHLOOP"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Foreach Table">
+              <DTS:ForEachEnumerator
+                DTS:CreationName="Microsoft.ForEachADOEnumerator"
+                DTS:DTSID="{6BDCF208-B256-481A-ABBF-64D127651C98}"
+                DTS:ObjectName="{83A95408-B010-4B4B-8AB4-27ED0F5D78A9}">
+                <DTS:ObjectData>
+                  <FEEADO
+                    EnumType="EnumerateRowsInFirstTable"
+                    VarName="User::ArchiveControlResultset9" />
+                </DTS:ObjectData>
+              </DTS:ForEachEnumerator>
+              <DTS:Variables />
+              <DTS:Executables>
+                <DTS:Executable
+                  DTS:refId="Package\Sequence Container\Execute Purge Manager Thread9\Foreach Table\Purge Manager"
+                  DTS:CreationName="Microsoft.ExecuteSQLTask"
+                  DTS:Description="Execute SQL Task"
+                  DTS:DTSID="{F4E36030-A8EB-4D84-B863-0CF7BF4B6CAC}"
+                  DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+                  DTS:LocaleID="-1"
+                  DTS:ObjectName="Purge Manager"
+                  DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+                  DTS:ThreadHint="9">
+                  <DTS:Variables />
+                  <DTS:ObjectData>
+                    <SQLTask:SqlTaskData
+                      SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                      SQLTask:SqlStatementSource="EXEC [ArchiveControl].[sp_PSA_PurgeManager] ?,?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="0"
+                        SQLTask:DtsVariableName="User::ArchiveDatabase9"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="1"
+                        SQLTask:DtsVariableName="User::ArchiveSchemaName9"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="2"
+                        SQLTask:DtsVariableName="User::ArchiveTableName9"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="129"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="3"
+                        SQLTask:DtsVariableName="User::IsPurgeCandidate9"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="4"
+                        SQLTask:DtsVariableName="User::ThreadID9"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                      <SQLTask:ParameterBinding
+                        SQLTask:ParameterName="5"
+                        SQLTask:DtsVariableName="$Package::BatchId"
+                        SQLTask:ParameterDirection="Input"
+                        SQLTask:DataType="3"
+                        SQLTask:ParameterSize="-1" />
+                    </SQLTask:SqlTaskData>
+                  </DTS:ObjectData>
+                </DTS:Executable>
+              </DTS:Executables>
+              <DTS:ForEachVariableMappings>
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{DCDC4144-442E-4CF0-BEED-97DAE770892A}"
+                  DTS:ObjectName="{DCDC4144-442E-4CF0-BEED-97DAE770892A}"
+                  DTS:ValueIndex="0"
+                  DTS:VariableName="User::ArchiveDatabase9" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{A59255D2-0056-48E3-83C0-AD05477E7AB2}"
+                  DTS:ObjectName="{A59255D2-0056-48E3-83C0-AD05477E7AB2}"
+                  DTS:ValueIndex="1"
+                  DTS:VariableName="User::ArchiveSchemaName9" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{59F1CE1F-5782-444A-8A13-CB8DACB9F7C8}"
+                  DTS:ObjectName="{59F1CE1F-5782-444A-8A13-CB8DACB9F7C8}"
+                  DTS:ValueIndex="2"
+                  DTS:VariableName="User::ArchiveTableName9" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{92A20D53-3473-48A5-8362-5CC9F9E0099B}"
+                  DTS:ObjectName="{92A20D53-3473-48A5-8362-5CC9F9E0099B}"
+                  DTS:ValueIndex="3"
+                  DTS:VariableName="User::IsPurgeCandidate9" />
+                <DTS:ForEachVariableMapping
+                  DTS:CreationName=""
+                  DTS:DTSID="{DB6FA99C-10DC-4DB1-9935-257B1414A4D2}"
+                  DTS:ObjectName="{DB6FA99C-10DC-4DB1-9935-257B1414A4D2}"
+                  DTS:ValueIndex="4"
+                  DTS:VariableName="User::ThreadID9" />
+              </DTS:ForEachVariableMappings>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread9\Get Archiving Control data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{3F63B079-7507-4914-BE17-5412F2CDCEF8}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Get Archiving Control data"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="9">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{FACC7E7C-256A-427E-B535-E962EE4DEA88}"
+                  SQLTask:SqlStatementSource="SELECT ArchiveDatabaseName, ArchiveSchemaName, ArchiveTableName,IsPurgeCandidate, ThreadId&#xA;FROM ArchiveControl.PSAArchiveControl&#xA;WHERE ThreadId = 9 and IsPurgeCandidate = 1"
+                  SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="0"
+                    SQLTask:DtsVariableName="User::ArchiveControlResultset9" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Sequence Container\Execute Purge Manager Thread9.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{BDC4C29F-4A4F-4BC5-B7AD-C26E2B6B8245}"
+              DTS:From="Package\Sequence Container\Execute Purge Manager Thread9\Get Archiving Control data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Sequence Container\Execute Purge Manager Thread9\Foreach Table" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread1\Foreach Table\Purge Manager"
+          TopLeft="33,26" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,100"
+          Size="237,143"
+          Id="Package\Sequence Container\Execute Purge Manager Thread1\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread1\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread1.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,269"
+          Size="265,312"
+          Id="Package\Sequence Container\Execute Purge Manager Thread1"
+          TopLeft="8,6" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread10\Foreach Table\Purge Manager"
+          TopLeft="37,22" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,93"
+          Size="237,136"
+          Id="Package\Sequence Container\Execute Purge Manager Thread10\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread10\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread10.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="269,261"
+          Size="269,304"
+          Id="Package\Sequence Container\Execute Purge Manager Thread10"
+          TopLeft="1132,347" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread2\Foreach Table\Purge Manager"
+          TopLeft="33,22" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,100"
+          Size="237,143"
+          Id="Package\Sequence Container\Execute Purge Manager Thread2\Foreach Table"
+          TopLeft="13,102" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread2\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread2.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,267"
+          Size="265,310"
+          Id="Package\Sequence Container\Execute Purge Manager Thread2"
+          TopLeft="287,9" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread3\Foreach Table\Purge Manager"
+          TopLeft="33,20" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,100"
+          Size="237,143"
+          Id="Package\Sequence Container\Execute Purge Manager Thread3\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread3\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread3.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,264"
+          Size="265,307"
+          Id="Package\Sequence Container\Execute Purge Manager Thread3"
+          TopLeft="568,12" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread4\Foreach Table\Purge Manager"
+          TopLeft="41,20" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,95"
+          Size="237,138"
+          Id="Package\Sequence Container\Execute Purge Manager Thread4\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread4\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread4.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,260"
+          Size="265,303"
+          Id="Package\Sequence Container\Execute Purge Manager Thread4"
+          TopLeft="850,14" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread5\Foreach Table\Purge Manager"
+          TopLeft="43,20" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,88"
+          Size="237,131"
+          Id="Package\Sequence Container\Execute Purge Manager Thread5\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread5\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread5.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,255"
+          Size="265,298"
+          Id="Package\Sequence Container\Execute Purge Manager Thread5"
+          TopLeft="1125,17" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread6\Foreach Table\Purge Manager"
+          TopLeft="33,24" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,86"
+          Size="237,129"
+          Id="Package\Sequence Container\Execute Purge Manager Thread6\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread6\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread6.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,254"
+          Size="265,297"
+          Id="Package\Sequence Container\Execute Purge Manager Thread6"
+          TopLeft="8,347" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread7\Foreach Table\Purge Manager"
+          TopLeft="37,20" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,88"
+          Size="237,131"
+          Id="Package\Sequence Container\Execute Purge Manager Thread7\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread7\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread7.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,256"
+          Size="265,299"
+          Id="Package\Sequence Container\Execute Purge Manager Thread7"
+          TopLeft="287,347" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread8\Foreach Table\Purge Manager"
+          TopLeft="39,20" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,89"
+          Size="237,132"
+          Id="Package\Sequence Container\Execute Purge Manager Thread8\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread8\Get Archiving Control data"
+          TopLeft="28,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread8.PrecedenceConstraints[Constraint]"
+          TopLeft="130.5,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,258"
+          Size="265,301"
+          Id="Package\Sequence Container\Execute Purge Manager Thread8"
+          TopLeft="570,348" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread9\Foreach Table\Purge Manager"
+          TopLeft="39,20" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237,90"
+          Size="237,133"
+          Id="Package\Sequence Container\Execute Purge Manager Thread9\Foreach Table"
+          TopLeft="13,101" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Sequence Container\Execute Purge Manager Thread9\Get Archiving Control data"
+          TopLeft="29,8" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Execute Purge Manager Thread9.PrecedenceConstraints[Constraint]"
+          TopLeft="131,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="265,289"
+          Size="265,332"
+          Id="Package\Sequence Container\Execute Purge Manager Thread9"
+          TopLeft="853,348" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1406,735"
+          Size="1406,778"
+          Id="Package\Sequence Container"
+          TopLeft="125.25,143.75" />
+        <AnnotationLayout
+          Text="Created By : Aziz Alam&#xA;Description: Data purging Solution is removing expired and dormant data out of the&#xA;archived database."
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="474,72"
+          Id="a4a34043-7897-4388-b1b9-a149b066f4c0"
+          TopLeft="125.25,39.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
